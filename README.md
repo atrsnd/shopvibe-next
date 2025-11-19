@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🛍️ ShopVibe – E-Commerce Frontend (Next.js 14 + Zustand + React Query)
 
-## Getting Started
+Proyek ini adalah aplikasi e-commerce sederhana yang dibangun menggunakan Next.js 14 App Router, Zustand untuk state management, dan React Query untuk data fetching. Aplikasi ini menggunakan FakeStore API sebagai sumber data produk.
 
-First, run the development server:
+Fitur utama meliputi daftar produk, detail produk, keranjang belanja (cart), checkout, serta alur khusus Buy Now yang terpisah dari checkout keranjang.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+📌 Fitur Utama
+1. Product Listing
+Menampilkan semua produk dari FakeStore API
+Modal detail produk (popup) ketika kartu produk diklik
+Tombol Add to Cart
+Tombol Buy Now dengan alur pembayaran cepat
+2. Cart Page
+Menampilkan produk yang ditambahkan ke keranjang
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Menambah/mengurangi jumlah item
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Menghapus item dari keranjang
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Total harga otomatis
 
-## Learn More
+Tombol Checkout menuju halaman pembayaran
 
-To learn more about Next.js, take a look at the following resources:
+3. Buy Now Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Memilih satu produk untuk dibeli langsung
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Menampilkan halaman khusus Buy Now sebelum Checkout
 
-## Deploy on Vercel
+Pisah dari keranjang untuk menghindari konflik data
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. Checkout
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Bisa berasal dari keranjang atau Buy Now
+
+Menampilkan list produk yang dibeli
+
+Menghitung total harga
+
+UI siap untuk integrasi payment gateway
