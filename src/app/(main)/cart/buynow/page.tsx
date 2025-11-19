@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 
 const CheckoutPage = () => {
-  const { product, clearCheckout } = useBuyNowStore();
+  const { product } = useBuyNowStore();
   const router = useRouter();
 
   useEffect(() => {
